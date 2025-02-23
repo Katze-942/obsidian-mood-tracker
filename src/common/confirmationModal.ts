@@ -16,11 +16,11 @@ export abstract class ConfirmationModal extends Modal {
 		this.titleEl.setText(this.title);
 		const btnsDiv = contentEl.createDiv();
 		btnsDiv.style.marginTop = "10px"
-		const okBtn = btnsDiv.createEl("button", { text: "Ok" });
+		const okBtn = btnsDiv.createEl("button", { text: "Да" });
 		okBtn.style.marginRight = "0.5rem";
 		okBtn.tabIndex = 0;
 		okBtn.onClickEvent(async () => await this.onConfirmCallback());
-		const cancelBtn = btnsDiv.createEl("button", { text: "Cancel" });
+		const cancelBtn = btnsDiv.createEl("button", { text: "Отмена" });
 		cancelBtn.tabIndex = 1;
 		cancelBtn.onClickEvent(() => {
 			if (this.onCancelCallback) {

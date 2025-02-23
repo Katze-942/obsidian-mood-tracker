@@ -12,7 +12,7 @@ export class EmotionGroupDeleteModal extends ConfirmationModal {
 		private emotionGroup: EmotionGroup
 	) {
 		super(app, 
-      `Delete emotion group "${emotionGroup.name}" ?`, 
+      `Удалить группу "${emotionGroup.name}" ?`,
       () =>	this.onConfirmation()
 		);
 	}

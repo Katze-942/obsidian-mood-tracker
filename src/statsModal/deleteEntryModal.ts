@@ -5,8 +5,8 @@ import MoodTrackerPlugin from "src/main";
 export class DeleteEntryModal extends ConfirmationModal {
 
     constructor(private plugin: MoodTrackerPlugin, entry: IMoodTrackerEntry, private onDeleteCallback: (e: IMoodTrackerEntry) => void) {
-        super(plugin.app, "Delete mood tracking entry", () => this.deleteEntry(entry));
-        this.setContent(`Delete mood tracking entry for ${entry.dateTime}?`)
+        super(plugin.app, "Удаление записи Mood Tracker", () => this.deleteEntry(entry));
+        this.setContent(`Удалить запись Mood Tracker для ${entry.dateTime}?`)
     }
 
     async deleteEntry(entry: IMoodTrackerEntry): Promise<void> {

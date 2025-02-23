@@ -57,10 +57,10 @@
 </script>
 
 <!-- date picker -->
-<h2>Mood Tracking History</h2>
+<h2>История Mood Tracker</h2>
 <div class="date-picker-container">
-    from: <input bind:value={startDate} on:change={generateDatasetDebounced} type="date" min="2000-01-01" pattern="\d{4}-\d{2}-\d{2}" />
-    to: <input bind:value={endDate} on:change={generateDatasetDebounced} type="date" min="2000-01-01"  required pattern="\d{4}-\d{2}-\d{2}"/>
+    От: <input bind:value={startDate} on:change={generateDatasetDebounced} type="date" min="2000-01-01" pattern="\d{4}-\d{2}-\d{2}" />
+    до: <input bind:value={endDate} on:change={generateDatasetDebounced} type="date" min="2000-01-01"  required pattern="\d{4}-\d{2}-\d{2}"/>
 </div>
 
 <!-- chart -->
@@ -68,9 +68,9 @@
 
 <!-- total stats -->
 <div class="total-stats-container">
-    <div>Average mood: {moodRatingLabelDict[Math.round(averageMoodRating)]} ({averageMoodRating})</div>
-    <div>Most common mood: {moodRatingLabelDict[mostCommonMood]}</div>
-    <div>Common emotions: {mostCommonEmotions.join(', ')}</div>
+    <div>Среднее настроение: {moodRatingLabelDict[Math.round(averageMoodRating)]} ({averageMoodRating})</div>
+    <div>Самое частое настроение: {moodRatingLabelDict[mostCommonMood]}</div>
+    <div>Общие эмоции: {mostCommonEmotions.join(', ')}</div>
 </div>
 
 <SelectedDay plugin={plugin} dateString={selectedDateString} data={selectedDayData} moodRatingDict={moodRatingLabelDict}/>

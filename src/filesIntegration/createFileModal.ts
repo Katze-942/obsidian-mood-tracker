@@ -3,8 +3,8 @@ import { ConfirmationModal } from "src/common/confirmationModal";
 
 export class CreateFileModal extends ConfirmationModal {
 	constructor(app: App, path: string, content: string) {
-		super(app, "File does not exist", () => this.createFile(path, content));
-    this.setContent(`The file at location "${path}" doesn't exist.\nWould you like to create it?`)
+		super(app, "Файл не найден", () => this.createFile(path, content));
+    this.setContent(`Файл по пути "${path}" отсутствует.\nХотите создать его?`)
 	}
 
     async createFile(path: string, content: string): Promise<void> {

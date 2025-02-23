@@ -43,7 +43,7 @@ export class DataIntegrityService {
             const eg = new EmotionGroup();
             eg.color = x.color;
             eg.emotions = x.emotions;
-            eg.name = x.name ?? "unnamed group";
+            eg.name = x.name ?? "безымянная группа";
             eg.id = randomUUID();
             return eg;
         })

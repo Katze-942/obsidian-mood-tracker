@@ -29,7 +29,7 @@ export const DEFAULT_SETTINGS: MoodTrackerSettings = {
     },
     moodRatingLabelSize: 3,
     entryTemplate: "- {{ICON}} {{NOTE}}",
-    trackerModalTitle: "How are you feeling?",
+    trackerModalTitle: "Как ты себя чувствуешь?",
     useEmotions: true,
     journalPosition: "## Mood Tracker",
     addToJournal: false,

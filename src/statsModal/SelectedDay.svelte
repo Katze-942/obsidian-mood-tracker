@@ -39,14 +39,14 @@
 <div>
 	<h4>{dateString}</h4>
 	{#if !data || data.length === 0}
-		<div>No entries for this day. Click diagram to select another day.</div>
+		<div>Для этого дня нет записей. Нажмите на диаграмму, чтобы выбрать другой день.</div>
 	{:else}
 		{#each data as entry}
 			<div>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<span
 					style="cursor: pointer;"
-					title="edit entry"
+					title="Редактировать запись"
 					on:click={() => openMoodTrackerModal(entry)}>✏️</span
 				>
                 				<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -71,7 +71,7 @@
 	<div>
 		<button
 			on:click={openModalForNewEntry}
-			style="cursor: pointer; margin-top: 0.5rem">add a new entry</button
+			style="cursor: pointer; margin-top: 0.5rem">Добавить новую запись</button
 		>
 	</div>
 </div>

@@ -46,7 +46,7 @@
 			labels: rawData.map((d) => d.date),
 			datasets: [
 				{
-					label: "Average Mood Rating",
+					label: "Средняя оценка настроения",
 					data: rawData.map((d) => d.moodRating),
 					//spanGaps: true,
 					backgroundColor: rawData.map(x => hexToRgba(plugin.settings.chartColor, 0.5)),

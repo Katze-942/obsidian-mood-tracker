@@ -65,7 +65,7 @@
 		<MoodRating
 			emoji={moodRatingLabelDict[1]}
 			fontSize={plugin.settings.moodRatingLabelSize}
-			title="very bad"
+			title="Очень плохо"
 			rating="1"
 			on:setRating={handleSetRating}
 			bind:activeRating={entry.moodRating}
@@ -73,7 +73,7 @@
 		<MoodRating
 			emoji={moodRatingLabelDict[2]}
 			fontSize={plugin.settings.moodRatingLabelSize}
-			title="bad"
+			title="Плохо"
 			rating="2"
 			on:setRating={handleSetRating}
 			bind:activeRating={entry.moodRating}
@@ -81,7 +81,7 @@
 		<MoodRating
 			emoji={moodRatingLabelDict[3]}
 			fontSize={plugin.settings.moodRatingLabelSize}
-			title="ok"
+			title="Нормально"
 			rating="3"
 			on:setRating={handleSetRating}
 			bind:activeRating={entry.moodRating}
@@ -89,7 +89,7 @@
 		<MoodRating
 			emoji={moodRatingLabelDict[4]}
 			fontSize={plugin.settings.moodRatingLabelSize}
-			title="good"
+			title="Хорошо"
 			rating="4"
 			on:setRating={handleSetRating}
 			bind:activeRating={entry.moodRating}
@@ -97,7 +97,7 @@
 		<MoodRating
 			emoji={moodRatingLabelDict[5]}
 			fontSize={plugin.settings.moodRatingLabelSize}
-			title="very good"
+			title="Супер!"
 			rating="5"
 			on:setRating={handleSetRating}
 			bind:activeRating={entry.moodRating}
@@ -117,13 +117,13 @@
 	<div class="note-container" style="font-size: 100%;">
 		<textarea
 			class="note"
-			placeholder="add a note about what you feel (optional)"
+			placeholder="Опиши сюда, что ты сейчас чувствуешь? (необязательно)"
 			bind:value={entry.note}
 		></textarea>
 	</div>
 	<div style="display: flex; justify-content: space-between">
 		<div style="display: flex; align-items: center; gap: 0.8rem;">
-			<span>date & time of entry </span><input
+			<span>Дата и время записи</span><input
 				id="datetime"
 				type="datetime-local"
 				value={dateTimeString}
@@ -131,7 +131,7 @@
 				style="cursor: pointer;"
 			/><label for="datetime"></label>
 		</div>
-		<button style="cursor: pointer;" on:click={saveEntry}>Save</button>
+		<button style="cursor: pointer;" on:click={saveEntry}>Сохранить</button>
 	</div>
 </div>
 

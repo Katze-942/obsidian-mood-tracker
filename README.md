@@ -1,41 +1,66 @@
+# ДИСКЛЕЙМЕР ОТ ПЕРЕВОДЧИКА!
+
+Я НЕ являюсь создателем данного плагина! Я создал форк исходного репозитория и перевёл весь текст, включая названия эмоций, на русский язык. Помимо этого, я сделал несколько личных корректировок:
+- Дополнил описание в тех местах, где это показалось мне необходимы
+- Исправил CSS-стили, чтобы они корректно работали как в тёмной, так и в светлой теме.
+- Варианты названий эмоций не совпадают с оригиналом, учтите это.
+
+## Как установить данный плагин?
+
+1. В разделе GitHub Releases скачайте три последних файла (css, json и js).
+2. Скопируйте их с заменой в папку `ВАШ_ПРОЕКТ_В_OBSIDIAN/.obsidian/plugins/mood-tracker/`
+3. Удалите файл data.json, если хотите использовать русифицированные названия эмоций (это сбросит настройки плагина).
+
+## В случае проблем...
+
+Не стесняйтесь создавать Issues (вопросы/проблемы) на GitHub, если обнаружите ошибки в переводе или работе плагина.
+
 # Mood Tracker
-Mood Tracker for Obsidian.md, inspired by [Amazing Marvin's](https://amazingmarvin.com/) Mood Tracker.
 
-## Why this plugin?
-While you definitely can build a mood tracking system in Obsidian with markdown files, metadata and Dataview, it can be tedious to maintain and use.
+Трекер настроения для Obsidian.md, вдохновлённый [Amazing Marvin's](https://amazingmarvin.com/).
 
-This plugin provides a clean, user-friendly alternative with a lot of "batteries included".
+## Почему этот плагин?
 
-The data is stored in your vault, in plain JSON.
+Хотя можно создать систему отслеживания настроения в Obsidian с помощью markdown-файлов, метаданных и Dataview, это может быть утомительно в использовании и поддержке.
 
-## Track your moods & emotions
-Monitor mood with "mood rating"; personalize mood labels.
+Этот плагин предлагает чистый и удобный интерфейс с множеством встроенных функций.
 
-Incorporate detailed emotions (fully customizable).
+Данные хранятся в вашем хранилище (vault) в виде обычного JSON-файла.
 
-Include notes in entries.
+## Отслеживайте свое настроение и эмоции
 
-[See demo](#mood-tracking)
+Следите за настроением с помощью «оценки настроения» и персонализируйте метки
 
-## Add mood tracking data to your journals
-Mood Tracker allows adding entries to notes, like a daily journal, with dynamic note paths based on the entry date.
+Добавляйте подробные эмоции (полностью настраиваемые).
 
-[See demo](#add-entry-to-daily-note)
+Включайте заметки в записи.
 
-## Mood tracking stats & history
-View mood history in a graph. 
-Track average and frequent moods and emotions. 
-Click a graph point to explore daily details.
+[См. демонстрацию](#mood-tracking)
 
-[See demo](#history-and-stats)
+## Добавление данных о настроении в ваши записи
 
-You can also edit past entries and add new entries for past days.
+Mood Tracker позволяет добавлять записи о настроении в заметки, такие как ежедневный дневник, с динамическими путями заметок на основе даты записи.
 
-[See demo](#edit-past-entries)
+[См. демонстрацию](#add-entry-to-daily-note)
+
+## Статистика и история настроения
+
+Просматривайте историю настроения в виде графика.
+
+Отслеживайте средние и наиболее частые настроения и эмоции.
+
+Нажимайте на точку графика, чтобы просматривать детали за день.
+
+[См. демонстрацию](#history-and-stats)
+
+Также можно редактировать прошлые записи и добавлять новые записи за прошедшие дни.
+
+[См. демонстрацию](#edit-past-entries)
 
 
-#### Embeddable graph
-You can embed the graph into a note with `mood-tracker-stats` codeblock:
+#### Встраиваемый график
+
+График можно встроить в заметку с помощью блока кода `mood-tracker-stats`:
 ```mood-tracker-stats
 end: current-week
 daysBeforeEnd: 90
@@ -45,46 +70,45 @@ showCommonEmotionsList: true
 height: 500px
 ```
 
-Options:
-- end: date in "YYYY-MM-DD" format, or dynamic date ("today", "current-week" (end of), "previous-week" (end of), "current-month" (end of), "previous-month" (end of))
-- daysBeforeEnd: number of days to show
-- showAverage: show average mood rating (defaults to false)
-- showMostCommonMood: show the most common emotion (defaults to false)
-- showCommonEmotionsList: show a list of the most common emotions (defaults to false)
-- height: height of the graph (pixels, %, anything that `style` attribute of HTML element would support) (defaults to 350px)
-- width: the same as height (defaults to 100%)
+Доступные параметры:
+- end: дата в формате «YYYY-MM-DD» или динамическая дата («today», «current-week» (конец), «previous-week» (конец), «current-month» (конец), «previous-month» (конец))
+- daysBeforeEnd: количество отображаемых дней
+- showAverage: показывать средний рейтинг настроения (по умолчанию — false)
+- showMostCommonMood: показывать наиболее частое настроение (по умолчанию — false)
+- showCommonEmotionsList: показывать список наиболее частых эмоций (по умолчанию — false)
+- height: высота графика (в пикселях, %, любом формате, поддерживаемом атрибутом `style` в HTML) (по умолчанию — 350px)
+- width: ширина, аналогично height (по умолчанию — 100%)
 
-For example, this codeblock will render records for the current month, with no additional info:
-
+Пример блока кода для отображения записей за текущий месяц без дополнительной информации:
 ```mood-tracker-stats
 end: current-month
 daysBeforeEnd: 39
 ```
 
+## Планы на будущее
+
+- [x] Настраиваемые эмодзи для настроения
+- [x] Редактирование прошлых записей
+- [x] Разделы / блоки эмоций
+- [x] Добавление данных в дневники / ежедневные заметки
+- [ ] Настройка цветов графика
+- [ ] Дополнительные типы графиков
+- [ ] Экспорт данных
+- [ ] Импорт данных
 
 
-## Roadmap
-- [x] Customize mood emojis
-- [x] Edit past entries
-- [x] Emotion sections / blocks
-- [x] Add data to journals / daily notes
-- [ ] Customize graph colors
-- [ ] More chart types
-- [ ] Export data
-- [ ] Import data
-
-## Demos
-#### Mood tracking
+## Демонстрация
+#### Отслеживание настроения
 ![mood-tracker-sections-demo](https://github.com/dartungar/obsidian-mood-tracker/assets/36126057/cdef3563-dbee-4bb6-b52e-78c09ba4d826)
 
 
-#### Add entry to daily note
+#### Добавление записи в Markdown-заметку
 ![mood-tracker-add-to-note-demo](https://github.com/dartungar/obsidian-mood-tracker/assets/36126057/1d3f679d-adc6-4651-a340-c4012d72ce12)
 
 
-#### History and stats
+#### История и статистика
 ![mood-tracker-stats-demo](https://github.com/dartungar/obsidian-mood-tracker/assets/36126057/7031bf7b-3e5d-4bfc-89bb-099d5f3c32fa)
 
 
-#### Edit past entries
+#### Редактирование прошлых записей
 ![mood-tracker-edit-history-demo](https://github.com/dartungar/obsidian-mood-tracker/assets/36126057/2a5b325d-8737-4c94-9aee-de2476feebbc)

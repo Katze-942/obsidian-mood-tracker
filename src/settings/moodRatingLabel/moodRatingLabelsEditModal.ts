@@ -15,7 +15,7 @@ export class MoodRatingLabelsEditModal extends Modal {
     onOpen(): void {
         store.plugin.set(this._plugin);
 
-        this.titleEl.innerText = "Edit mood rating labels";
+        this.titleEl.innerText = "Изменение эмодзи";
 
         this.component = new MoodRatingLabelsEditComponent({
             target: this.contentEl,

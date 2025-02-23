@@ -24,20 +24,20 @@
 
 <div class="edit-modal">
 	<div class="edit-modal-section">
-		<label for="nameInput">Group name</label>
+		<label for="nameInput">Название группы</label>
 		<input id="nameInput" type="text" bind:value={emotionGroup.name} />
 	</div>
 	<div class="edit-modal-section">
-		<label for="colorInput">Background color</label>
+		<label for="colorInput">Фоновый цвет</label>
 		<input id="colorInput" type="color" bind:value={emotionGroup.color} />
 	</div>
 	<div class="edit-modal-section">
-		<label for="emotionsInput">Emotions (separated by commas or newlines)</label
+		<label for="emotionsInput">Эмоции (через запятую или новую строку)</label
 		>
 		<textarea id="emotionsInput" value={emotionGroup.emotions.join("\n")} on:change={onEmotionsChange} />
 	</div>
 	<div>
-		<button on:click={save}>Save</button>
+		<button on:click={save}>Сохранить</button>
 	</div>
 </div>
 

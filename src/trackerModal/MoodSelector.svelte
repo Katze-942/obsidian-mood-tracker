@@ -23,7 +23,7 @@
             on:keypress={(e) => toogleMood(mood)} 
             class="mood-item"
             class:active={activeMoods.includes(mood)}
-            style="border-color: {moodSection.color}; background-color: {moodSection.color}"
+            style="border-color: {moodSection.color}; background-color: {moodSection.color};"
             >
                 {mood}            
             </span>
@@ -51,7 +51,7 @@
         cursor: pointer;
         filter: opacity(60%);
     }
-    
+
     :not(.mood-item.active, .mood-item:hover) {
         background-color: var(--modal-background) !important;
     }
@@ -60,5 +60,6 @@
         filter: opacity(100%);
         border: 1px solid;
         box-shadow: var(--shadow-s);
+        color: black;
     }
 </style>

@@ -71,7 +71,7 @@ export class FileService {
 		} else {
 			if ( index+1 != contentArray.length ) {
 				this._plugin.showNotice(
-					`could not find the selected position in your journal-file -> Adding mood to the bottom.`,
+					`не удалось найти выбранную позицию в вашем журнале -> Добавление настроения в нижнюю часть.`,
 					5000,
 					`Mood Tracker`
 				);

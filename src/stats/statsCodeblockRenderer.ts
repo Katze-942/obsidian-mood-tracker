@@ -103,7 +103,7 @@ export class StatsCodeblockRenderer {
 					return new Date(rangeEndRaw);
 				} catch (error) {
 					this._plugin.showNotice(
-						`Mood Tracker: error parsing date ${rangeEndRaw}.`
+						`Mood Tracker: ошибка при разборе даты ${rangeEndRaw}.`
 					);
 					throw error;
 				}
@@ -112,19 +112,19 @@ export class StatsCodeblockRenderer {
 
     renderAverage(containerEl: HTMLElement): void {
         const averageMoodRating = getTotalAverageMoodRating(this._stats);
-        const text = `Average mood: ${this._plugin.settings.moodRatingLabelDict[Math.round(averageMoodRating)]} (${averageMoodRating})`;
+        const text = `Среднее настроение: ${this._plugin.settings.moodRatingLabelDict[Math.round(averageMoodRating)]} (${averageMoodRating})`;
         containerEl.createDiv({text: text})
     }
 
     renderMostCommonMood(containerEl: HTMLElement) {
         const mostCommonMood = getMostCommonMoodRating(this._plugin.entries);
-        const text = `Most common mood: ${this._plugin.settings.moodRatingLabelDict[mostCommonMood]}`;
+        const text = `Самое частое настроение: ${this._plugin.settings.moodRatingLabelDict[mostCommonMood]}`;
         containerEl.createDiv({text: text})
     }
 
     renderCommonEmotionsList(containerEl: HTMLElement) {
         const mostCommonEmotions = getMostCommonEmotions(this._stats, 3);
-        const text = `Common emotions: ${mostCommonEmotions.join(', ')}`;
+        const text = `Общие эмоции: ${mostCommonEmotions.join(', ')}`;
         containerEl.createDiv({text: text})
     }
 

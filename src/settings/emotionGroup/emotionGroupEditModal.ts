@@ -15,7 +15,7 @@ export class EmotionGroupEditModal extends Modal {
         store.plugin.set(this._plugin);
 
         this.modalEl.addClass("mood-tracker-modal");
-        this.titleEl.innerText = "Edit emotion group";
+        this.titleEl.innerText = "Изменить группу эмоций";
 
         this.component = new EmotionsGroupEditComponent({
             target: this.contentEl,

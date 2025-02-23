@@ -10,7 +10,7 @@ export class MoveDataModal extends ConfirmationModal {
 	) {
 		super(
 			app,
-			`Move mood tracking data from "${_plugin.settings.folderPath}" to "${newPath}" ?`,
+			`Переместить данные Mood Tracker из "${_plugin.settings.folderPath}" в "${newPath}" ?`,
 			() => this.onConfirmation()
 		);
 	}
@@ -25,7 +25,7 @@ export class MoveDataModal extends ConfirmationModal {
 			await this._plugin.loadEntries();
 		} catch (error) {
 			this._plugin.showNotice(
-				"Error moving mood tracking data. See console for details."
+				"Ошибка при перемещении данных Mood Tracker. Подробности см. в консоли."
 			);
 			if (await adapter.exists(newPathFull)) {
 				await adapter.remove(newPathFull);
@@ -35,7 +35,7 @@ export class MoveDataModal extends ConfirmationModal {
 
 		await adapter.remove(oldPathFull);
 		this._plugin.showNotice(
-			`Successfully moved mood tracking data from "${this._plugin.settings.folderPath}" to "${this.newPath}".`
+			`Успешно перемещены данные Mood Tracker из папки "${this._plugin.settings.folderPath}" в "${this.newPath}".`
 		);
 
 		this._plugin.settings.folderPath = this.newPath;

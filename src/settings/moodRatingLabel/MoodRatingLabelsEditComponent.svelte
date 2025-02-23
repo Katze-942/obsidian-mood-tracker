@@ -20,7 +20,7 @@
 <div class="edit-mood-labels-modal">
 	<div class="labels-aligned">
 		<div  class="mv-5">
-			<label for="veryGood">Very Good</label>
+			<label for="veryGood">Отлично</label>
 			<input
 				id="veryGood"
 				type="text"
@@ -28,7 +28,7 @@
 			/>
 		</div>
 		<div class="mv-5">
-			<label for="good">Good</label>
+			<label for="good">Хорошо</label>
 			<input
 				id="good"
 				type="text"
@@ -36,7 +36,7 @@
 			/>
 		</div>
 		<div class="mv-5">
-			<label for="ok">Ok</label>
+			<label for="ok">Нормально</label>
 			<input
 				id="ok"
 				type="text"
@@ -44,7 +44,7 @@
 			/>
 		</div>
 		<div class="mv-5">
-			<label for="bad">Bad</label>
+			<label for="bad">Плохо</label>
 			<input
 				id="bad"
 				type="text"
@@ -52,7 +52,7 @@
 			/>
 		</div>
 		<div class="mv-5">
-			<label for="veryBad">Very bad</label>
+			<label for="veryBad">Очень плохо</label>
 			<input
 				id="veryBad"
 				type="text"
@@ -61,7 +61,7 @@
 		</div>
 		<div  class="mv-5">
 			<label for="size"
-				>Label size: {plugin.settings.moodRatingLabelSize} rem</label
+				>Размер эмодзи: {plugin.settings.moodRatingLabelSize} rem</label
 			>
 			<input
 				id="size"
@@ -75,7 +75,7 @@
 	</div>
 
 	<div class="mv-5">
-		<div>Preview:</div>
+		<div>Предпросмотр:</div>
 		<div style="font-size: {plugin.settings.moodRatingLabelSize + 'rem'}">
 			{plugin.settings.moodRatingLabelDict[1]}
 			{plugin.settings.moodRatingLabelDict[2]}
@@ -86,7 +86,7 @@
 	</div>
 
 	<div>
-		<button on:click={save}>Save</button>
+		<button on:click={save}>Сохранить</button>
 	</div>
 </div>
 

@@ -146,7 +146,7 @@ export default class MoodTrackerPlugin extends Plugin {
 				migratedSettings
 			);
 			this.showNotice(
-				"Mood Tracker has been updated. Check out the new emotion settings!",
+				"Mood Tracker был обновлён. Оцените новые настройки эмоций!",
 				15000
 			);
 			await this.saveSettings();
@@ -186,7 +186,7 @@ export default class MoodTrackerPlugin extends Plugin {
 	private addRibbonIcons() {
 		this.addRibbonIcon(
 			"smile-plus",
-			"Open Mood Tracker",
+			"Добавить запись в Mood Tracker",
 			(evt: MouseEvent) => {
 				this.openTrackerModal();
 			}
@@ -194,7 +194,7 @@ export default class MoodTrackerPlugin extends Plugin {
 
 		this.addRibbonIcon(
 			"line-chart",
-			"Open Mood Tracking History",
+			"Открыть историю Mood Tracker",
 			(evt: MouseEvent) => {
 				this.openStatsModal();
 			}
@@ -204,7 +204,7 @@ export default class MoodTrackerPlugin extends Plugin {
 	private addCommands() {
 		this.addCommand({
 			id: "open-mood-tracker",
-			name: "Open Tracker",
+			name: "Открыть трекер",
 			callback: () => {
 				this.openTrackerModal();
 			},
@@ -212,7 +212,7 @@ export default class MoodTrackerPlugin extends Plugin {
 
 		this.addCommand({
 			id: "open-mood-tracker-history",
-			name: "Open History",
+			name: "Открыть историю",
 			callback: () => {
 				this.openStatsModal();
 			},

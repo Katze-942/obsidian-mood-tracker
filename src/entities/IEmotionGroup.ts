@@ -11,7 +11,7 @@ export interface IEmotionGroup {
 
 export class EmotionGroup implements IEmotionGroup {
     id = randomUUID();
-    name = "emotion group";
+    name = "Эмоциональная группа";
     sortOrder: number | undefined;
     color = "#b84444";
     textColor: string | undefined;
