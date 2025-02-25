@@ -36,13 +36,13 @@
 	}
 </script>
 
-<div>
+<div class="daily-entry">
 	<h4>{dateString}</h4>
 	{#if !data || data.length === 0}
 		<div>Для этого дня нет записей. Нажмите на диаграмму, чтобы выбрать другой день.</div>
 	{:else}
 		{#each data as entry}
-			<div>
+			<div class="entry">
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<span
 					style="cursor: pointer;"
@@ -62,7 +62,7 @@
 					{entry.emotions.join(", ")}
 				</span>
 				{#if entry.note}
-					<span>📄 <i>{entry.note}</i></span>
+					<span><br>📄 <i>{entry.note}</i></span>
 				{/if}
 
 			</div>

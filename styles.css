@@ -11,3 +11,11 @@
 .mood-tracker-notice-header {
 	font-weight: 900;
 }
+
+.modal-content {
+	overflow-x: scroll
+}
+
+.daily-entry .entry {
+	margin-bottom: 15px
+}
